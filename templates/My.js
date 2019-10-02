@@ -1,6 +1,6 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyA8bOv1jNRZwyX59w9mqZYom2joLCJWFqQ",
+    apiKey: "",
     authDomain: "cs3560parking.firebaseapp.com",
     databaseURL: "https://cs3560parking.firebaseio.com",
     projectId: "cs3560parking",
