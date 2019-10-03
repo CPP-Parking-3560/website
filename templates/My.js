@@ -1,6 +1,8 @@
 // Your web app's Firebase configuration
+var auth = require('./auth.json');      //Have an auth.json file with the google api key labeled key
+                                        //Please do not push auth.json to git
 var firebaseConfig = {
-    apiKey: "",
+    apiKey: auth.key,
     authDomain: "cs3560parking.firebaseapp.com",
     databaseURL: "https://cs3560parking.firebaseio.com",
     projectId: "cs3560parking",
