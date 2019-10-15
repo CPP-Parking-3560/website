@@ -6,9 +6,10 @@ var firebaseConfig = {
     projectId: "cs3560parking",
     storageBucket: "cs3560parking.appspot.com",
     messagingSenderId: "270171142840",
-    appId: "1:270171142840:web:34eab48113259ab11a524d",
-    measurementId: "G-5QZBZF3NFB"
+    appId: "1:270171142840:web:057b2cc6e33ef0df1a524d",
+    measurementId: "G-05KBYW6DPR"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+
