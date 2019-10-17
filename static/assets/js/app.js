@@ -1,21 +1,56 @@
-(function(){
-        const config = {
-        apiKey: "AIzaSyA-ChRzG5RcrIzyyYHg3Uj9tELlCtl1xwQ",
-        authDomain: "cppparking-12e62.firebaseapp.com",
-        databaseURL: "https://cppparking-12e62.firebaseio.com",
-        projectId: "cppparking-12e62",
-        storageBucket: "cppparking-12e62.appspot.com",
-        messagingSenderId: "421167264622",
-        appId: "1:421167264622:web:ae06e56f16d8fc9c26477f",
-        measurementId: "G-48NHV7P46N"
-        };
-        firebase.initializeApp(config);
-
         //Get elements
         const txtEmail = document.getElementById('txtEmail');
         const txtPassword = document.getElementById('txtPassword');
         const btnLogin = document.getElementById('btnLogIn');
         const btnSignUp = document.getElementById('btnSignUp');
+
+function toggleSignIn() 
+{
+        //Get elements
+        const txtEmail = document.getElementById('txtEmail');
+        const txtPassword = document.getElementById('txtPassword');
+        const btnLogin = document.getElementById('btnLogIn');
+        
+      if (firebase.auth().currentUser) {
+        // [START signout]
+        firebase.auth().signOut();
+        // [END signout]
+      } else {
+        var email txtEmail.value;
+        var password = txtPassword.value;
+        if (email.length < 4) {
+          alert('Please enter an email address.');
+          return;
+        }
+        if (password.length < 4) {
+          alert('Please enter a password.');
+          return;
+        }
+        // Sign in with email and pass.
+        // [START authwithemail]
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // [START_EXCLUDE]
+          if (errorCode === 'auth/wrong-password') {
+            alert('Wrong password.');
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+          document.getElementById('quickstart-sign-in').disabled = false;
+          // [END_EXCLUDE]
+        });
+        // [END authwithemail]
+      }
+      document.getElementById('quickstart-sign-in').disabled = true;
+}
+
+
+(function(){
+       
+
 
         //Add login event
         btnLogin.addEventListener('click',e => {
