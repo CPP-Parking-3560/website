@@ -1,6 +1,12 @@
 // Your web app's Firebase configuration
+// Firebase App (the core Firebase SDK) is always required and
+// must be listed before other Firebase SDKs
+var firebase = require("firebase/app");
 var auth = require('./auth.json');      //Have an auth.json file with the google api key labeled key
                                         //Please do not push auth.json to git
+
+require("firebase/auth");
+require("firebase/database");
 
 var firebaseConfig = {
     apiKey: auth.key,
