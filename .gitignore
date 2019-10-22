@@ -1,2 +1,5 @@
 #Ignore auth token
 auth.json
+
+#Ignore node_modules
+node_modules
