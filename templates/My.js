@@ -2,6 +2,10 @@
 var auth = require('./auth.json');      //Have an auth.json file with the google api key labeled key
                                         //Please do not push auth.json to git
 
+function submitClick(){
+
+}
+
 var firebaseConfig = {
     apiKey: auth.key,
     authDomain: "cs3560parking.firebaseapp.com",
