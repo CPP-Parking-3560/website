@@ -8,7 +8,10 @@ var auth = require('./auth.json');      //Have an auth.json file with the google
 require("firebase/auth");
 require("firebase/database");
 
-
+function submitClick(){
+    var firebaseREf = firebase.database().ref();
+    firebase.child("Text").set("Some Value");
+}
 
 var firebaseConfig = {
     apiKey: auth.key,
