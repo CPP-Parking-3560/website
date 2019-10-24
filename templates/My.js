@@ -10,7 +10,7 @@ require("firebase/database");
 
 function submitClick(){
     var firebaseREf = firebase.database().ref();
-    firebase.child("Text").set("Some Value");
+    firebase.push().set(message);
 }
 
 var firebaseConfig = {
