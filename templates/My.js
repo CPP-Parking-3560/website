@@ -8,11 +8,6 @@ var auth = require('./auth.json');      //Have an auth.json file with the google
 require("firebase/auth");
 require("firebase/database");
 
-function submitClick(){
-    var firebaseREf = firebase.database().ref();
-    firebase.push().set(message);
-}
-
 var firebaseConfig = {
     apiKey: auth.key,
     authDomain: "cs3560parking.firebaseapp.com",
