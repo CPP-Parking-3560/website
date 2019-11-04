@@ -24,15 +24,15 @@ document.getElementById('permitForm').addEventListener('submit', submitClick);
 function submitClick(e){
     e.preventDefault();
     //get values
-    var name = getInput('name');
-    var email = getInput('email');
-    var password = getInput('password');
-    var phone = getInput('phone');
-    var make = getInput('make');
-    var model = getInput('model');
-    var color = getInput('color');
-    var year = getInput('year');
-    var license = getInput('license');
+    var name = getInput('nameInput');
+    var email = getInput('emailInput');
+    var password = getInput('passwordInput');
+    var phone = getInput('phoneInput');
+    var make = getInput('carMakeInput');
+    var model = getInput('modelInput');
+    var color = getInput('colorInput');
+    var year = getInput('yearInput');
+    var license = getInput('licenseInput');
 
     //save message
     saveMessage(name, email, password, phone, make, model, color, year, license);
