@@ -1,6 +1,7 @@
 
 var firebase = require("firebase/app");
 var auth = require('./auth.json');
+//This file is used for the form in profile.html
 
 var firebaseConfig = {
     apiKey: auth.key,
