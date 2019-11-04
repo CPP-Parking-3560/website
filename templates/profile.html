@@ -12,6 +12,8 @@
 <body>
     <div class="container" id="contentHistoriasOm">
         <section id="subirOm" class="pb-3">
+
+            <!--Header Container. Currently contains the logo. -->
             <div class="row p-0 m-0">
                 <div class="col p-0 m-0">
                     <div class="row bg-white mx-auto">
@@ -19,6 +21,9 @@
                     </div>
                 </div>
             </div>
+
+            <!--Personal Profile Container(Name, Email, Password, Phone Number)
+                Each category has an edit button(Look to only have the fields be editable by default and just have a save button?) -->
             <div class="row p-0 m-0">
                 <div class="col-lg-4 col-xl-5 mx-auto">
                     <h5 class="text-primary"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Personal Profile:</font></font></strong></h5>
@@ -28,26 +33,34 @@
                                 <tr></tr>
                             </thead>
                             <tbody>
+                                <!--Name field with an Edit Button(Should display currently saved name with the option to edit/save) -->
                                 <tr>
-                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name: John Doe</font></font></td>
-                                    <td class="p-0 m-0 p-1"><button class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
+                                    <td><input id="nameInput" class="form-control" name="nameInput" placeholder="Name: John Doe"></td>
+                                    <td class="p-0 m-0 p-1"><button id="nameEditButton" class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
+
                                 </tr>
+                                <!--Email field with an Edit Button(Display the currently saved email with option to edit/save)-->
                                 <tr>
-                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email: jdoe@cpp.edu</font></font></td>
-                                    <td class="p-0 m-0 p-1"><button class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
+                                    <td><input id="emailInput" class="form-control" type="email" name="emailInput" placeholder="Email: jdoe@cpp.edu"></td>
+                                    <td class="p-0 m-0 p-1"><button id="emailEditButton" class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
                                 </tr>
+                                <!--Password Field with an Edit Button(Display the currently saved password as astericks and give the option to change it? Unsure of specifics)-->
                                 <tr>
-                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Password: ***********</font></font></td>
-                                    <td class="p-0 m-0 p-1"><button class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
+                                    <td><input id="passwordInput" class="form-control" type="password" name="passWorldInput" placeholder="Password: ***********"></td>
+                                    <td class="p-0 m-0 p-1"><button id="passwordEditButton" class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
                                 </tr>
+                                <!--Cell Number Field with an Edit Button(Displays the currently saved number and gives the option to edit/save it) -->
                                 <tr>
-                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cell Phone Number: 555-555-5555</font></font></td>
-                                    <td class="p-0 m-0 p-1"><button class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
+                                    <td><input id="phoneInput" class="form-control" type="tel" name="phoneInput" placeholder="Cell Phone Number: 555-555-5555"></td>
+                                    <td class="p-0 m-0 p-1"><button id="phoneEditButton" class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
                                 </tr>
                                 <tr></tr>
                            </tbody>
                         </table>
-                    </div><button class="btn btn-primary btn-block" type="button" >SAVE</button></div>
+                    </div><button id="saveButton" class="btn btn-primary btn-block" type="button" onclick="submitClick()">SAVE</button></div>
+
+                <!--Permit Info Container(Permit Status, Permit Number, Car Make, Model, Color)
+                    Car Make, Model, and Color each have an edit button(Look to only have one edit button?)-->
                 <div class="col-lg-4 col-xl-7 p-0 m-0 p-3 bg-warning mx-auto">
                     <h5 class="text-primary p-0 m-0 pb-2"><strong>Permit INFO:</strong></h5>
                     <div class="table-responsive">
@@ -56,31 +69,38 @@
                                 <tr></tr>
                             </thead>
                             <tbody>
+                                <!--Current Permit Status display(no edit) -->
                                 <tr>
                                     <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Status: Active</font></font></td>
                                 </tr>
+                                <!--Permit Number display(no edit) -->
                                 <tr>
                                     <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Permit Number:</font></font></td>
                                 </tr>
+                                <!--Car Make field with edit button(display the car make with option to edit). Look to remove edit buttons?-->
                                 <tr>
-                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Car Make:</font></font></td>
-                                    <td class="p-0 m-0 p-1"><button class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
+                                    <td><input id="carMakeInput" class="form-control" name="carMakeInput" placeholder="Car Make:"></td>
+                                    <td class="p-0 m-0 p-1"><button id="carMakeEditButton" class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
                                 </tr>
+                                <!--Model field with an edit button(displays current car model with option to edit)-->
                                 <tr>
-                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Model:</font></font></td>
-                                    <td class="p-0 m-0 p-1"><button class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
+                                    <td><input id="modelInput" class="form-control" name="modelInput", placeholder="Model:"></td>
+                                    <td class="p-0 m-0 p-1"><button id="modelEditButton" class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
                                 </tr>
+                                <!--Color field with an edit button(display current car color with option to edit)-->
                                 <tr>
-                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Color:</font></font></td>
-                                    <td class="p-0 m-0 p-1"><button class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
+                                    <td><input id="colorInput" class="form-control"  name="colorInput" placeholder="Color:"></td>
+                                    <td class="p-0 m-0 p-1"><button id="colorEditButton" class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
                                 </tr>
+                                <!--Year field with an edit button(displays the year of the car with option to edit)-->
                                 <tr>
-                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Year:</font></font></td>
-                                    <td class="p-0 m-0 p-1"><button class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
+                                    <td><input id="yearInput" class="form-control"  name="yearInput" placeholder="Year:"></td>
+                                    <td class="p-0 m-0 p-1"><button id="yearEditButton" class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
                                 </tr>
+                                <!--License field with an edit button(displays current license number with the option to edit)-->
                                 <tr>
-                                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">License Number:</font></font></td>
-                                    <td class="p-0 m-0 p-1"><button class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
+                                    <td><input id="licenseInput" class="form-control" name="licenseInput" placeholder="License Number:"></td>
+                                    <td class="p-0 m-0 p-1"><button id="licenseEditButton" class="btn btn-dark ml-auto d-block" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">EDIT</font></font></button></td>
                                 </tr>
                                 <tr></tr>
                            </tbody>
