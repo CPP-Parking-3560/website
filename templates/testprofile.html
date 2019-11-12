@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PUber Overview</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<style>
+	.collapsible {
+	  background-color: #777;
+	  color: white;
+	  cursor: pointer;
+	  padding: 18px;
+	  width: 100%;
+	  border: none;
+	  text-align: left;
+	  outline: none;
+	  font-size: 15px;
+	}
+
+	.active, .collapsible:hover {
+	  background-color: #555;
+	}
+
+	.collapsible:after {
+	  content: '\002B';
+	  color: white;
+	  font-weight: bold;
+	  float: right;
+	  margin-left: 5px;
+	}
+
+	.active:after {
+	  content: "\2212";
+	}
+
+	.content {
+	  padding: 0 18px;
+	  max-height: 0;
+	  overflow: hidden;
+	  transition: max-height 0.2s ease-out;
+	  background-color: #f1f1f1;
+	}
+	.threadinput {
+
+	}
+	</style>
+</head>
+	<body>
+		<h2>PUber Overview</h2>
+		<table>
+			 <!--User's name -->
+	        <tr>
+	            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">John Doe</font></font></td>
+	        </tr>
+			<!--Current Permit Status display(no edit) -->
+	        <tr>
+	            <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Status: Active</font></font></td>
+	        </tr>
+		</table>
+		
+		<button class="collapsible">General</button>
+		<div class="content">
+			<table class="table">
+				<tbody>
+	                <!--Name field with an Edit Button(Should display currently saved name with the option to edit/save) -->
+	                <tr>
+	                    <td><input id="nameInput" class="form-control" name="nameInput" placeholder="Name: John Doe"></td>
+	                </tr>
+	                <!--Email field with an Edit Button(Display the currently saved email with option to edit/save)-->
+	                <tr>
+	                    <td><input id="emailInput" class="form-control" type="email" name="emailInput" placeholder="Email: jdoe@cpp.edu"></td>    
+	                </tr>
+	                <!--Password Field with an Edit Button(Display the currently saved password as astericks and give the option to change it? Unsure of specifics)-->
+	                <tr>
+	                    <td><input id="passwordInput" class="form-control" type="password" name="passWorldInput" placeholder="Password: ***********"></td>
+	                </tr>
+	                <!--Cell Number Field with an Edit Button(Displays the currently saved number and gives the option to edit/save it) -->
+	                <tr>
+	                    <td><input id="phoneInput" class="form-control" type="tel" name="phoneInput" placeholder="Cell Phone Number: 555-555-5555"></td>
+	                    
+	                </tr>
+	               
+	            </tbody>
+	        </table>
+		</div>
+		<button class="collapsible">Car Profile</button>
+		<div class="content">
+		  <table class = "table">
+		  	<tbody>
+		  		<!--Car Make field with edit button(display the car make with option to edit). Look to remove edit buttons?-->
+                <tr>
+                    <td><input id="carMakeInput" class="form-control" name="carMakeInput" placeholder="Car Make:"></td>
+                </tr>
+                <!--Model field with an edit button(displays current car model with option to edit)-->
+                <tr>
+                    <td><input id="modelInput" class="form-control" name="modelInput", placeholder="Model:"></td>
+                </tr>
+                <!--Color field with an edit button(display current car color with option to edit)-->
+                <tr>
+                    <td><input id="colorInput" class="form-control"  name="colorInput" placeholder="Color:"></td>
+                </tr>
+                <!--Year field with an edit button(displays the year of the car with option to edit)-->
+                <tr>
+                    <td><input id="yearInput" class="form-control"  name="yearInput" placeholder="Year:"></td>
+                </tr>
+                <!--License field with an edit button(displays current license number with the option to edit)-->
+                <tr>
+                    <td><input id="licenseInput" class="form-control" name="licenseInput" placeholder="License Number:"></td>
+                </tr>
+		  	</tbody>
+		  </table>
+		</div>
+		<button class="collapsible">Open Tickets</button>
+		<div class="content">
+		  <table class = "table">
+		  	<tbody>
+		  		<p> No Open Tickets</p>
+		  	</tbody>
+		  </table>
+		</div>
+		<button class="collapsible">Parking Avaliablity</button>
+		<div class="content">
+		  <div class="container">
+			  <h2>Parking Lot Capacity</h2>
+			  <h3>106: Parking Structure	East of Voorhis Alumni Park and West of Police and Parking Services (Bldg. 109).</h3>
+			  <div class="progress">
+			    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+			      40% Full 
+			    </div>
+			  </div>
+			  <h3>B	East of Parking Lot K.</h3>
+			  <div class="progress">
+			    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+			      50% Full (You might want to get here early)
+			    </div>
+			  </div>
+			  <h3>E1 NorthEast of Parking Lot E2.</h3>
+			  <div class="progress">
+			    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+			      60% Full (Warning)
+			    </div>
+			  </div>
+			  <div class="progress">
+			    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+			      70% Full (Almost Full)
+			    </div>
+			  </div>
+			
+				
+				<h3>E2	NorthWest of Interim Design Center (Bldg. 89).	</h3>
+				<h3>F1	SouthEast of Residence Hall, Aliso (Bldg. 23).</h3>
+				<h3>F3	North of Parking Lot F4 and South of Recreation/Maintenance (Bldg. 71).	</h3>
+				<h3>F5	NorthEast of Parking Structure (Bldg. 106).	</h3>
+				<h3>F9	South of Parking Structure (Bldg. 106).	</h3>
+				<h3>F10	East of Police and Parking Services (Bldg. 109).</h3>
+				<h3>H	South of Student Affairs Information Technology Services (Bldg. 91).	</h3>
+				<h3>I	North of Agriscapes/Farm Store (Bldg. 211).	</h3>
+				<h3>J	West of College of Environmental Design (Bldg. 7) and NorthWest of Health Services (Bldg. 46).	</h3>
+				<h3>M	South of Parking Lot J and South West of College of Environmental Design (Bldg. 7).</h3>
+				<h3>N	On Bronco Way Across from the Child Care Center (Building 116)	</h3>
+				<h3>Overflow Parking Lot	SouthEast of American Red Cross</h3>
+				<h3>Parking Structure 2	SouthEast of iPoly High School (Bldg. 128).</h3>	
+				<h3>R	NorthWest of Kellogg House Pomona (Bldg. 112).</h3>
+				<h3>U	West of University Village (Bldg. 200).</h3>	
+			</div>
+
+		</div>
+
+		<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var content = this.nextElementSibling;
+		    if (content.style.maxHeight){
+		      content.style.maxHeight = null;
+		    } else {
+		      content.style.maxHeight = content.scrollHeight + "px";
+		    } 
+		  });
+		}
+		</script>
+
+	</body>
+</html>

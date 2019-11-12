@@ -1,7 +1,9 @@
-
 var firebase = require("firebase/app");
 var auth = require('./auth.json');
 //This file is used for the form in profile.html
+
+require("firebase/auth");
+require("firebase/database");
 
 var firebaseConfig = {
     apiKey: auth.key,
@@ -13,7 +15,7 @@ var firebaseConfig = {
     appId: "1:270171142840:web:620cb57b803ba3981a524d",
     measurementId: "G-TVNM1KFV8F"
 };
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig);
 
 //reference message collection
 var messagesRef = firebase.database().ref('messages');
