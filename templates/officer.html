@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Fix CSS-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>Citation</title>
+	<link rel="stylesheet" href="static/temp_files/bootstrap.min.css">
+	<link rel="stylesheet" href="static/temp_files/font-awesome.min.css">
+    <link rel="stylesheet" href="static/assets/css/OfficerCitation-Form.css">
+    <script src="static/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/assets/js/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<div class="container">
+		<!--Row for License or Permit Search-->
+		<div class="row">
+			<form method="post">
+				<div class="illustration"><img src="static/assets/img/icon2.jpg"></div>
+				<h2>Search</h2>
+
+				<div class="cite-group">
+					<input id="licenseSearch" class="form-control" name="licenseSearch" placeholder="License Number">
+				</div>
+				OR
+				<div class="cite-group">
+					<input id="permitSearch" class="form-control" name="permitSearch" placeholder="Permit Number">
+				</div>
+				<div class="cite-group"><button id="goButton" class="btn btn-primary btn-block" type="button" onclick="submitClick()">Go </button></div>
+
+				
+			</form>
+		</div>
+		<!--Row for Citation reason menu-->
+		<div class="row">
+			<form method="post">
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownButton" data-toggle="dropdown">Reason for Citation
+					<span class="caret"></span></button>
+					<!--Dropdown Menu does not show. Need js scripts i think? idk-->
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">No Visible Permit</a>
+						<a class="dropdown-item" href="#">Invalid Parking Spot</a>
+						<a class="dropdown-item" href="#">Permit Expired</a>
+					</div>
+
+				</div>
+			</form>
+		</div>
+		
+	</div>
+
+
+
+</body>
+</html>
