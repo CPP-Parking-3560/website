@@ -19,7 +19,7 @@ firebase.initializeApp(firebaseConfig)
 var messagesRef = firebase.database().ref('messages');
 
 /* Listen for form Save */
-document.getElementById('permitForm').addEventListener('submit', submitClick);
+document.getElementById('profile-form').addEventListener('submit', submitClick);
 /* This function saves user information */
 function submitClick(e){
     e.preventDefault();
