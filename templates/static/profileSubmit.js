@@ -25,7 +25,6 @@ function submitClick(e){
     e.preventDefault();
     //get values
     var name = getInput('nameInput');
-    var email = getInput('emailInput');
     var password = getInput('passwordInput');
     var phone = getInput('phoneInput');
     var make = getInput('carMakeInput');
