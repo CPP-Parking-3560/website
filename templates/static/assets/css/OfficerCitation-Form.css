@@ -1,0 +1,27 @@
+/*I have no idea what I'm doing
+*/
+.officerSearch{
+	background-color: #f1f7fc;
+	text-align: center;
+	
+}
+
+.officerSearch .cite-group{
+	align-items: center;
+	max-width: 320px;
+  	width: 90%;
+  	margin: 0 auto;
+  	background-color: #ffffff;
+  	padding: 10px;
+  
+}
+#orText{
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+
+body{
+	background-color: #f1f7fc;
+	text-align: center;
+}
