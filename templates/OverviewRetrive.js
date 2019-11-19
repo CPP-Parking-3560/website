@@ -1,9 +1,5 @@
-var firebase = require("firebase/app");
-var auth = require('./auth.json');
+var auth = fetch('./auth.json');
 //This file is used for the form in profile.html
-
-require("firebase/auth");
-require("firebase/database");
 
 var firebaseConfig = {
     apiKey: auth.key,
