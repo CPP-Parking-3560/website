@@ -1,10 +1,5 @@
-var firebase = require("firebase/app");
-var auth = require('./auth.json');
+var auth = fetch('./auth.json');
 //This file is used for the form in profile.html
-
-require("firebase/auth");
-require("firebase/database");
-
 var firebaseConfig = {
     apiKey: auth.key,
     authDomain: "cs3560parking.firebaseapp.com",
@@ -21,24 +16,22 @@ firebase.initializeApp(firebaseConfig);
 var messagesRef = firebase.database().ref('messages');
 
 /* Listen for form Save */
-document.getElementById('profile-form').addEventListener('submit', submitClick);
+document.getElementById('profile-form').addEventListener('submit', submitForm);
 /* This function saves user information */
-function submitClick(e){
+function submitForm(e){
     e.preventDefault();
     //get values
-    var name = getInput('nameInput');
-    var password = getInput('passwordInput');
-    var phone = getInput('phoneInput');
-    var make = getInput('carMakeInput');
-    var model = getInput('modelInput');
-    var color = getInput('colorInput');
-    var year = getInput('yearInput');
-    var license = getInput('licenseInput');
+    var name = getInput('name');
+    var password = getInput('password');
+    var phone = getInput('phone');
+    var make = getInput('carMake');
+    var model = getInput('model');
+    var color = getInput('color');
+    var year = getInput('year');
+    var license = getInput('licNumber');
 
     //save message
-    saveMessage(name, email, password, phone, make, model, color, year, license);
-
-
+    saveMessage(name, password, phone, make, model, color, year, license);
 }
 
 //Function to get form values
@@ -47,11 +40,10 @@ function getInput(id){
 }
 
 //save message to firebase
-function saveMessage(name, email, password, phone, make, model, color, year, license){
-    var newMassageRef = messagesRef.push;
+function saveMessage(name, password, phone, make, model, color, year, license){
+    var newMassageRef = messagesRef.push();
     newMassageRef.set({
         name: name,
-        email: email,
         password: password,
         phone: phone,
         make: make,
