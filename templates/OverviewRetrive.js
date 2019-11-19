@@ -22,11 +22,48 @@ var overviewsRef = firebase.database().ref('messages');
 
 ref.on('name', gotName, errName);
 
-function gotName(name){
+function gotName(data){
     //console.log(name.val());
-    var name = data.val();
-    var keys = cs3560parking.keys(name);
+    var messages = data.val();
+    var keys = Object.keys(messages);
     console.log(keys);
+
+    for(var i = 0; i <keys.length; i++){
+        var k = keys[i];
+        var color = messages[k].color;
+        var license = messages[k].license;
+        var make = messages[k].make;
+        var model = messages[k].model;
+        var name = messages[k].name;
+        var password = messages[k].password;
+        var phone = messages[k].phone;
+        var year = messages[k].year;
+        //console.log(color, license, make, model, name, password, phone, year);
+
+        var l1 = createElement('l1',name);
+        l1.parent('nameInput');
+
+        var l2 = createElement('l2',password);
+        l2.parent('passwordInput');
+
+        var l3 = createElement('l3',phone);
+        l3.parent('phoneInput');
+
+        var l4 = createElement('l4',make);
+        l4.parent('carMakeInput');
+
+        var l5 = createElement('l5',model);
+        l5.parent('modelInput');
+
+        var l6 = createElement('l6',color);
+        l6.parent('colorInput');
+
+        var l7 = createElement('l7',year);
+        l7.parent('yearInput');
+
+        var l8 = createElement('l8',license);
+        l8.parent('licenseInput');
+    }
 
 }
 function errName(name){
