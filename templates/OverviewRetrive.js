@@ -1,6 +1,10 @@
 var auth = fetch('./auth.json');
 //This file is used for the form in profile.html
 
+
+//retrive from auth user id
+//var userId = firebase.auth().currentUser.uid;
+
 var firebaseConfig = {
     apiKey: auth.key,
     authDomain: "cs3560parking.firebaseapp.com",
@@ -16,7 +20,7 @@ database = firebase.database();
 
 var overviewsRef = firebase.database().ref('messages');
 
-ref.on('name', gotName, errName);
+ref.on('messages', gotName, errName);
 
 function gotName(data){
     //console.log(name.val());
@@ -36,7 +40,7 @@ function gotName(data){
         var year = messages[k].year;
         //console.log(color, license, make, model, name, password, phone, year);
 
-        var l1 = createElement('l1',name);
+        var l1 =
         l1.parent('nameInput');
 
         var l2 = createElement('l2',password);
