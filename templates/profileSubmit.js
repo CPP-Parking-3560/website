@@ -52,5 +52,4 @@ function saveMessage(name, password, phone, make, model, color, year, license){
         year: year,
         license: license
     });
-
 }
