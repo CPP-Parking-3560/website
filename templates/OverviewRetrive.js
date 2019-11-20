@@ -16,7 +16,7 @@ database = firebase.database();
 
 var overviewsRef = firebase.database().ref('messages');
 
-ref.on('name', gotName, errName);
+overviewsRef.on('value', gotName, errName);
 
 function gotName(data){
     //console.log(name.val());
@@ -36,28 +36,28 @@ function gotName(data){
         var year = messages[k].year;
         //console.log(color, license, make, model, name, password, phone, year);
 
-        var l1 = createElement('l1',name);
+        var l1 = document.createElement('l1',name);
         l1.parent('nameInput');
 
-        var l2 = createElement('l2',password);
+        var l2 = document.createElement('l2',password);
         l2.parent('passwordInput');
 
-        var l3 = createElement('l3',phone);
+        var l3 = document.createElement('l3',phone);
         l3.parent('phoneInput');
 
-        var l4 = createElement('l4',make);
+        var l4 = document.createElement('l4',make);
         l4.parent('carMakeInput');
 
-        var l5 = createElement('l5',model);
+        var l5 = document.createElement('l5',model);
         l5.parent('modelInput');
 
-        var l6 = createElement('l6',color);
+        var l6 = document.createElement('l6',color);
         l6.parent('colorInput');
 
-        var l7 = createElement('l7',year);
+        var l7 = document.createElement('l7',year);
         l7.parent('yearInput');
 
-        var l8 = createElement('l8',license);
+        var l8 = document.createElement('l8',license);
         l8.parent('licenseInput');
 
         //howdy
