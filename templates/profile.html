@@ -66,10 +66,8 @@
                         </table>
                     </div>
                     <p class="full">
-                        <button type="submit">Submit</button>
-
+                        <button type="submit" onclick="window.open('testprofile.html','_self');" class="btn btn-default">Submit</button>
                     </p>
-                    <A HREF="testprofile.html">About this site</A>
                 </div>
                 <!--Permit Info Container(Permit Status, Permit Number, Car Make, Model, Color)
                 Car Make, Model, and Color each have an edit button(Look to only have one edit button?)-->
@@ -129,7 +127,8 @@
     </section>
 </div>
 <!--Caroline Added for saving user information-->
-<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
 <script src="profileSubmit.js"></script>
 </body>
 </html>

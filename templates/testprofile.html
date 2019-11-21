@@ -67,19 +67,19 @@
 				<tbody>
 	                <!--Name field with an Edit Button(Should display currently saved name with the option to edit/save) -->
 	                <tr>
-	                    <td><input id="nameInput" class="form-control" name="nameInput" placeholder="Name: John Doe"></td>
+						<td><label id="nameInput" class="form-control" name="nameInput" placeholder="Name: John Doe"></label></td>
 	                </tr>
 	                <!--Email field with an Edit Button(Display the currently saved email with option to edit/save)-->
 	                <tr>
-	                    <td><input id="emailInput" class="form-control" type="email" name="emailInput" placeholder="Email: jdoe@cpp.edu"></td>    
+						<td><label id="emailInput" class="form-control" type="email" name="emailInput" placeholder="Email: jdoe@cpp.edu"> </label></td>
 	                </tr>
 	                <!--Password Field with an Edit Button(Display the currently saved password as astericks and give the option to change it? Unsure of specifics)-->
 	                <tr>
-	                    <td><input id="passwordInput" class="form-control" type="password" name="passWorldInput" placeholder="Password: ***********"></td>
+						<td><label id="passwordInput" class="form-control" type="password" name="passWorldInput" placeholder="Password: ***********"> </label></td>
 	                </tr>
 	                <!--Cell Number Field with an Edit Button(Displays the currently saved number and gives the option to edit/save it) -->
 	                <tr>
-	                    <td><input id="phoneInput" class="form-control" type="tel" name="phoneInput" placeholder="Cell Phone Number: 555-555-5555"></td>
+						<td><label id="phoneInput" class="form-control" type="tel" name="phoneInput" placeholder="Cell Phone Number: 555-555-5555"> </label></td>
 	                    
 	                </tr>
 	               
@@ -92,23 +92,23 @@
 		  	<tbody>
 		  		<!--Car Make field with edit button(display the car make with option to edit). Look to remove edit buttons?-->
                 <tr>
-                    <td><input id="carMakeInput" class="form-control" name="carMakeInput" placeholder="Car Make:"></td>
+					<td><label id="carMakeInput" class="form-control" name="carMakeInput" placeholder="Car Make:"></label></td>
                 </tr>
                 <!--Model field with an edit button(displays current car model with option to edit)-->
                 <tr>
-                    <td><input id="modelInput" class="form-control" name="modelInput", placeholder="Model:"></td>
+					<td><label id="modelInput" class="form-control" name="modelInput", placeholder="Model:"></label></td>
                 </tr>
                 <!--Color field with an edit button(display current car color with option to edit)-->
                 <tr>
-                    <td><input id="colorInput" class="form-control"  name="colorInput" placeholder="Color:"></td>
+					<td><label id="colorInput" class="form-control"  name="colorInput" placeholder="Color:"></label></td>
                 </tr>
                 <!--Year field with an edit button(displays the year of the car with option to edit)-->
                 <tr>
-                    <td><input id="yearInput" class="form-control"  name="yearInput" placeholder="Year:"></td>
+					<td><label id="yearInput" class="form-control"  name="yearInput" placeholder="Year:"></label></td>
                 </tr>
                 <!--License field with an edit button(displays current license number with the option to edit)-->
                 <tr>
-                    <td><input id="licenseInput" class="form-control" name="licenseInput" placeholder="License Number:"></td>
+					<td><label id="licenseInput" class="form-control" name="licenseInput" placeholder="License Number:"></label></td>
                 </tr>
 		  	</tbody>
 		  </table>
@@ -185,7 +185,8 @@
 		  });
 		}
 		</script>
-		<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
 		<script src="OverviewRetrive.js"></script>
 	</body>
 </html>
