@@ -8,7 +8,11 @@ firebase.auth().onAuthStateChanged(function(user) {
        if(user!=null){
            var email_id = user.email;
            var email_verified = user.emailVerified;
+           var uid = "" + firebase.auth().currentUser.uid;
+
+           //localStorage.setItem("storageName", uid);
            console.log("Welcome: " + email_id +
+                        "\nUserID: " + uid +
                         "\nVerified: " + email_verified);
        }
    } else {
