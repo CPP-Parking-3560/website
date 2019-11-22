@@ -32,6 +32,9 @@ function submitForm(e){
     var year = getInput('year');
     var license = getInput('licNumber');
 
+    localStorage.setItem("licNum", license);
+
+
     //save message
     saveMessage(name, password, phone, make, model, color, year, license);
 }
@@ -47,6 +50,10 @@ function saveMessage(name, password, phone, make, model, color, year, license){
         name: name,
         password: password,
         phone: phone,
+        license: license
+    });
+    firebase.database().ref('cars/' + license).set({
+        userID: userID,
         make: make,
         model: model,
         color: color,

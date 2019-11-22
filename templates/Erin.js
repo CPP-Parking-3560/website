@@ -26,7 +26,9 @@ firebase.auth().onAuthStateChanged(function(user) {
                });
            }
            else{
+               firebase.auth().signOut();
                location.replace("profile.html");
+
            }
 
 
