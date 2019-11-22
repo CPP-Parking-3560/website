@@ -8,12 +8,28 @@ firebase.auth().onAuthStateChanged(function(user) {
        if(user!=null){
            var email_id = user.email;
            var email_verified = user.emailVerified;
-           var uid = "" + firebase.auth().currentUser.uid;
+           var Uid = firebase.auth().currentUser.uid;
+           localStorage.setItem("storageName",Uid);
+           localStorage.setItem("emailAuth", email_id);
 
            //localStorage.setItem("storageName", uid);
            console.log("Welcome: " + email_id +
-                        "\nUserID: " + uid +
+                        "\nUserID: " + Uid +
                         "\nVerified: " + email_verified);
+           if(email_verified != true) {
+               user.sendEmailVerification().then(function () {
+                   // Email sent.
+                   console.log("Verification sent");
+               }).catch(function (error) {
+                   // An error happened.
+                   console.log("Error: " + error.message);
+               });
+           }
+           else{
+               location.replace("profile.html");
+           }
+
+
        }
    } else {
        // No user is signed in.
@@ -51,15 +67,6 @@ function signup(){
         });
 
         //window.alert(email, password);
-
-        var user = firebase.auth().currentUser;
-        user.sendEmailVerification().then(function() {
-            // Email sent.
-            console.log("Verification sent");
-        }).catch(function(error) {
-            // An error happened.
-            console.log("Error: " + error.message);
-        });
     }
     else
         window.alert("Invalid email: " + str);

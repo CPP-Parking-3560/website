@@ -16,11 +16,15 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 database = firebase.database();
 
-var starCountRef = firebase.database().ref('messages/-Lu54HhYwADefjhDZ1sW');
+var userID = localStorage.getItem("storageName");
+var emailID = localStorage.getItem("emailAuth");
+
+
+var starCountRef = firebase.database().ref('users/' + userID);
 starCountRef.on('value', function(snapshot) {
 
     document.getElementById("nameInput").innerHTML = (snapshot.val() && snapshot.val().name) || 'Anonymous';
-    document.getElementById("emailInput").innerHTML = (snapshot.val() && snapshot.val().email) || 'Anonymous';
+    document.getElementById("emailInput").innerHTML = emailID;
     document.getElementById("passwordInput").innerHTML = (snapshot.val() && snapshot.val().password) || 'Anonymous';
     document.getElementById("phoneInput").innerHTML = (snapshot.val() && snapshot.val().phone) || 'Anonymous';
     document.getElementById("carMakeInput").innerHTML = (snapshot.val() && snapshot.val().make) || 'Anonymous';
