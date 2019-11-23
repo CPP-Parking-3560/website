@@ -14,7 +14,9 @@ firebase.initializeApp(firebaseConfig);
 
 
 function searchClick() {
+    var licenseNumber = document.getElementById("licenseSearch").value;
 
+    
 }
 
 function submitClick() {
