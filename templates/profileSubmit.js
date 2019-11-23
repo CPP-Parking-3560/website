@@ -15,6 +15,8 @@ firebase.initializeApp(firebaseConfig);
 //reference message collection
 var messagesRef = firebase.database().ref('messages');
 
+var userID = localStorage.getItem("storageName");
+
 /* Listen for form Save */
 document.getElementById('profile-form').addEventListener('submit', submitForm);
 /* This function saves user information */
@@ -30,6 +32,9 @@ function submitForm(e){
     var year = getInput('year');
     var license = getInput('licNumber');
 
+    localStorage.setItem("licNum", license);
+
+
     //save message
     saveMessage(name, password, phone, make, model, color, year, license);
 }
@@ -41,11 +46,14 @@ function getInput(id){
 
 //save message to firebase
 function saveMessage(name, password, phone, make, model, color, year, license){
-    var newMassageRef = messagesRef.push();
-    newMassageRef.set({
+    firebase.database().ref('users/' + userID).set({
         name: name,
         password: password,
         phone: phone,
+        license: license
+    });
+    firebase.database().ref('cars/' + license).set({
+        userID: userID,
         make: make,
         model: model,
         color: color,

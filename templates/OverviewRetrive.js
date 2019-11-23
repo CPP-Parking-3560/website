@@ -1,5 +1,3 @@
-
-
 var auth = fetch('./auth.json');
 //This file is used for the form in profile.html
 
@@ -16,16 +14,28 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 database = firebase.database();
 
-var starCountRef = firebase.database().ref('messages/-Lu54HhYwADefjhDZ1sW');
-starCountRef.on('value', function(snapshot) {
+var userID = localStorage.getItem("storageName");
+var emailID = localStorage.getItem("emailAuth");
+var licenseNum = localStorage.getItem("licNum");
 
-    document.getElementById("nameInput").innerHTML = (snapshot.val() && snapshot.val().name) || 'Anonymous';
-    document.getElementById("emailInput").innerHTML = (snapshot.val() && snapshot.val().email) || 'Anonymous';
-    document.getElementById("passwordInput").innerHTML = (snapshot.val() && snapshot.val().password) || 'Anonymous';
-    document.getElementById("phoneInput").innerHTML = (snapshot.val() && snapshot.val().phone) || 'Anonymous';
+
+var starCountRef = firebase.database().ref('users/' + userID);
+var getCarData = firebase.database().ref('cars/' + licenseNum);
+
+getCarData.on('value', function (snapshot) {
     document.getElementById("carMakeInput").innerHTML = (snapshot.val() && snapshot.val().make) || 'Anonymous';
     document.getElementById("modelInput").innerHTML = (snapshot.val() && snapshot.val().model) || 'Anonymous';
     document.getElementById("colorInput").innerHTML = (snapshot.val() && snapshot.val().color) || 'Anonymous';
     document.getElementById("yearInput").innerHTML = (snapshot.val() && snapshot.val().year) || 'Anonymous';
     document.getElementById("licenseInput").innerHTML = (snapshot.val() && snapshot.val().license) || 'Anonymous';
+});
+
+starCountRef.on('value', function(snapshot) {
+
+    document.getElementById("nameInput").innerHTML = (snapshot.val() && snapshot.val().name) || 'Anonymous';
+    document.getElementById("emailInput").innerHTML = emailID;
+    document.getElementById("passwordInput").innerHTML = (snapshot.val() && snapshot.val().password) || 'Anonymous';
+    document.getElementById("phoneInput").innerHTML = (snapshot.val() && snapshot.val().phone) || 'Anonymous';
+
+    //firebase.database().ref('users').child(userID).update({'dateOfBirth': 'hello'})
 });
