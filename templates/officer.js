@@ -40,13 +40,31 @@ function searchClick() {
         var username = (snapshot.val() && snapshot.val().userID) || 'Anonymous';
         console.log(username);
         localStorage.setItem("userKey",username);
-        // ...
     });
 
 
 }
 
 function submitClick() {
+    var userKey = localStorage.getItem("userKey");
+    var citationOption = document.getElementById("dropdownButton").value;
 
-    
+    if(citationOption == 1) {
+        citationOption = "No Visible Permit";
+    }
+    else if(citationOption == 2) {
+        citationOption = "Invalid Parking Spot";
+    }
+    else if(citationOption == 3) {
+        citationOption = "Expired Permit";
+    }
+    else {
+        citationOption = "Kill me";
+    }
+
+    firebase.database().ref('users').child(userKey).update({
+        'citation': citationOption
+    });
+
+    window.alert("Ticket Submitted");
 }

@@ -46,21 +46,21 @@
 			<form method="post">
 				<!--Dropdown button-->
 				<div class="dropdown">
-					<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownButton" data-toggle="dropdown">Reason for Citation
-					<span class="caret"></span></button>
-					<!--Dropdown menu with reasons for citation-->
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="#">No Visible Permit</a>
-						<a class="dropdown-item" href="#">Invalid Parking Spot</a>
-						<a class="dropdown-item" href="#">Permit Expired</a>
-					</div>
-					<div class="citeButton" id="citeButton">
+                    <label>
+                        <select class="browser-default custom-select" id = "dropdownButton">
+                            <option selected>Open this select menu</option>
+                            <option value="1">No Visible Permit</option>
+                            <option value="2">Invalid Parking Spot</option>
+                            <option value="3">Permit Expired</option>
+                        </select>
+                    </label>
+                    <div class="citeButton" id="citeButton">
 						<!--Replace onClickFunction-->
 						<button class="btn btn-primary btn-block" type="button" onclick="submitClick()">Cite</button>
 					</div>
 
 				</div>
-				
+
 			</form>
 		</div>
 		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
