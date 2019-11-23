@@ -54,7 +54,7 @@ function login(){
 
       console.log("Error : " + errorMessage);
     });
-    window.alert("stop refreshing please");
+   // window.alert("stop refreshing please");
 }
 
 function signup(){
