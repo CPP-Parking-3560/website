@@ -19,18 +19,12 @@
 		<div class="officerSearch">
 			<form method="post">
 				<div class="cite-group" id="logo"><img src="static/assets/img/icon2.jpg"></div>
-				<h2 class="cite-group">Search</h2>
+				<h2 class="cite-group">Issue Citation</h2>
 				<!--Search Box for license search-->
 				<div class="cite-group">
 					<input id="licenseSearch" class="form-control" name="licenseSearch" placeholder="License Number">
 				</div>
-				<div class="cite-group" id="orText">
-					Or
-				</div>
-				<!--Search Box for searching by permit id-->
-				<div class="cite-group">
-					<input id="permitSearch" class="form-control" name="permitSearch" placeholder="Permit Number">
-				</div>
+				
 				<!--Search Button-->
 				<div class="cite-group">
 					<!--Replace onClickFunction-->
@@ -54,7 +48,12 @@
 						<a class="dropdown-item" href="#">Invalid Parking Spot</a>
 						<a class="dropdown-item" href="#">Permit Expired</a>
 					</div>
-					<div class="citeButton" id="citeButton">
+
+					<div class="citeDate" id="cite">
+						<input id="citationDate" class="form-control" name="citationDate"  type="date" placeholder="Enter Date of Citation">
+					</div>
+
+					<div class="citeButton" id="cite">
 						<!--Replace onClickFunction-->
 						<button class="btn btn-primary btn-block" type="button" onclick="submitClick()">Cite</button>
 					</div>
