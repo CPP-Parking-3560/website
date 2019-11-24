@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+	<script defer src="http://pi.smcreboot.com:5000/socket.io/socket.io.js"></script>
+	<script defer src="js/script.js"></script>
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+
+	<main>
+		<div id="room-container">
+			<% Object.keys(rooms).forEach(room => { %>
+				<div><%= room %></div>
+				<a href="<%= room %>">Join</a>
+			<% }) %>
+		</div>
+		<form action="/room" method="POST">
+			<input name="room" type="text" required>
+			<button type="submit">New Room</button>
+		</form>
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>

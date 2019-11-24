@@ -1,0 +1,130 @@
+{
+    "parkinglocation": [
+    {
+        "image":"Bg-106.gif",
+        "location":"106: Parking Structure",
+        "description":"East of Voorhis Alumni Park and West of Police and Parking Services (Bldg. 109)",
+        "status":"Status: None",
+        "capacity":"40"
+    },
+    {
+        "image":"Pk-B.gif",
+        "location":"B",
+        "description":"East of Parking Lot K.",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-E1.gif",
+        "location":"E1",
+        "description":"NorthEast of Parking Lot E2.",
+        "status":"Status: None",
+        "capacity":"70"
+    },
+    {
+        "image":"Pk-E2.gif",
+        "location":"E2",
+        "description":"NorthWest of Interim Design Center (Bldg. 89).",
+        "status":"Status: None",
+        "capacity":"50"
+    },                  
+    {
+        "image":"Pk-F1.gif",
+        "location":"F1",
+        "description":"SouthEast of Residence Hall, Aliso (Bldg. 23).",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-F3.gif",
+        "location":"F3",
+        "description":"North of Parking Lot F4 and South of Recreation/Maintenance (Bldg. 71).",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-F5.gif",
+        "location":"F5",
+        "description":"NorthEast of Parking Structure (Bldg. 106)",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-F9.gif",
+        "location":"F9",
+        "description":"South of Parking Structure (Bldg. 106).",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-F10.gif",
+        "location":"F10",
+        "description":"East of Police and Parking Services (Bldg. 109).",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-H.gif",
+        "location":"H",
+        "description":"South of Student Affairs Information Technology Services (Bldg. 91).",
+        "status":"Status: None",
+        "capacity":""
+    },
+    {
+        "image":"Pk-I.gif",
+        "location":"I",
+        "description":"North of Agriscapes/Farm Store (Bldg. 211).",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-J.gif",
+        "location":"J",
+        "description":"West of College of Environmental Design (Bldg. 7) and NorthWest of Health Services (Bldg. 46).",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-M.gif",
+        "location":"M",
+        "description":"South of Parking Lot J and South West of College of Environmental Design (Bldg. 7).",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-N.jpg",
+        "location":"N",
+        "description":"On Bronco Way Across from the Child Care Center (Building 116).",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"comingsoon.gif",
+        "location":"Overflow Parking Lot",
+        "description":"SouthEast of American Red Cross",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-Structure-2.jpg",
+        "location":"Parking Structure 2 ",
+        "description":"SouthEast of iPoly High School (Bldg. 128)",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-R.gif",
+        "location":"R",
+        "description":"NorthWest of Kellogg House Pomona (Bldg. 112)",
+        "status":"Status: None",
+        "capacity":"50"
+    },
+    {
+        "image":"Pk-U.gif",
+        "location":"U",
+        "description":"West of University Village (Bldg. 200)",
+        "status":"Status: None",
+        "capacity":"50"
+    }
+    ]
+}

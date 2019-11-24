@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+    <link rel="stylesheet" href="css/overview.css">
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+
+	<main>
+            <h2>PUber Overview</h2>
+            <button class="collapsible">General</button>
+            <div class="content">
+                <table class="table">
+                    <tbody>
+                        <!--Name field with an Edit Button(Should display currently saved name with the option to edit/save) -->
+                        <tr>
+                            
+                            <td><label>Name:</label><label id="nameInput" class="form-control" name="nameInput" placeholder="Name: John Doe">Name</label></td>
+                        </tr>
+                        <!--Email field with an Edit Button(Display the currently saved email with option to edit/save)-->
+                        <tr>
+                            <td><label>Email:</label><label id="emailInput" class="form-control" type="email" name="emailInput" placeholder="Email: jdoe@cpp.edu"> </label></td>
+                        </tr>
+                        <!--Password Field with an Edit Button(Display the currently saved password as astericks and give the option to change it? Unsure of specifics)-->
+                        <tr>
+                            <td><label>Password:</label></label><label id="passwordInput" class="form-control" type="password" name="passWorldInput" placeholder="Password: ***********"> </label></td>
+                        </tr>
+                        <!--Cell Number Field with an Edit Button(Displays the currently saved number and gives the option to edit/save it) -->
+                        <tr>
+                            <td><label>Cell Phone Number:</label><label id="phoneInput" class="form-control" type="tel" name="phoneInput" placeholder="Cell Phone Number: 555-555-5555"> </label></td>
+                            
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+            <button class="collapsible">Car Profile</button>
+            <div class="content">
+              <table class = "table">
+                  <tbody>
+                      <!--Car Make field with edit button(display the car make with option to edit). Look to remove edit buttons?-->
+                    <tr>
+                        <td><label>Car Make</label><label id="carMakeInput" class="form-control" name="carMakeInput" placeholder="Car Make:"></label></td>
+                    </tr>
+                    <!--Model field with an edit button(displays current car model with option to edit)-->
+                    <tr>
+                        <td><label>Model:</label><label id="modelInput" class="form-control" name="modelInput", placeholder="Model:"></label></td>
+                    </tr>
+                    <!--Color field with an edit button(display current car color with option to edit)-->
+                    <tr>
+                        <td><label>Color:</label><label id="colorInput" class="form-control"  name="colorInput" placeholder="Color:"></label></td>
+                    </tr>
+                    <!--Year field with an edit button(displays the year of the car with option to edit)-->
+                    <tr>
+                        <td><label>Year:</label><label id="yearInput" class="form-control"  name="yearInput" placeholder="Year:"></label></td>
+                    </tr>
+                    <!--License field with an edit button(displays current license number with the option to edit)-->
+                    <tr>
+                        <td><label>License Plate Number</label><label id="licenseInput" class="form-control" name="licenseInput" placeholder="License Number:"></label></td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div>
+            <button class="collapsible">Open Tickets</button>
+            <div class="content">
+            <div class = "openticket">
+                <table class = "openticket">
+                    <tr>
+                        <th width="10%">Ticket #</th>
+                        <th width="70%">Detail</th>
+                        <th width="10%">Owed</th>
+                        <th width="10%">Pay</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Reason</th>
+                        <th>$</th>
+                        <th><a href="/payment">Pay</a></th>
+                    </tr>
+                </table>
+            </div>
+            </div>  
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	<script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+            </script>
+            <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+            <script src="js/OverviewRetrive.js"></script>
+</body>
+</html>

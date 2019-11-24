@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+
+	<main>
+            <div class="container">
+                    <section id="subirOm" class="pb-3">
+                        <!--Header Container. Currently contains the logo. -->
+                        <div class="row p-0 m-0">
+                            <div class="col p-0 m-0">
+                                <div class="row bg-white mx-auto">
+                                    <div class="col-12">
+                                        <img src="images/icon2.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form id="profile-form">
+                            <!--Personal Profile Container(Name, Email, Password, Phone Number)
+                            Each category has an edit button(Look to only have the fields be editable by default and just have a save button?) -->
+                            <div class="row p-0 m-0">
+                                <div class="col-lg-4 col-xl-5 mx-auto">
+                                    <h5 class="text-primary">
+                                        <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Edit Personal Profile:</font></font></strong>
+                                    </h5>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr></tr>
+                                            </thead>
+                                            <tbody>
+                                            <!--Name field with an Edit Button(Should display currently saved name with the option to edit/save) -->
+                                            <tr>
+                                                <td>
+                                                    <label>Name: </label>
+                                                    <input id="name" class="form-control" name="name" placeholder="John Doe">
+                                                </td>
+                                            </tr>
+                                            <!--Password Field with an Edit Button(Display the currently saved password as astericks and give the option to change it? Unsure of specifics)-->
+                                            <tr>
+                                                <td>
+                                                    <label>Password: </label>
+                                                    <input id="password" class="form-control" type="password" name="password" placeholder="***********">
+                                                </td>
+                                            </tr>
+                                            <!--Cell Number Field with an Edit Button(Displays the currently saved number and gives the option to edit/save it) -->
+                                            <tr>
+                                                <td>
+                                                    <label>Cell Phone Number: </label>
+                                                    <input id="phone" class="form-control" type="tel" name="phone" placeholder="555-555-5555">
+                                                </td>
+                                            </tr>
+                                            <tr></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="full">
+                                        <button type="submit" onclick="window.open('overview','_self');" class="btn btn-default">Submit</button>
+                                    </p>
+                                </div>
+                                <!--Permit Info Container(Permit Status, Permit Number, Car Make, Model, Color)
+                                Car Make, Model, and Color each have an edit button(Look to only have one edit button?)-->
+                                <div class="col-lg-4 col-xl-7 p-0 m-0 p-3 bg-warning mx-auto">
+                                    <h5 class="text-primary p-0 m-0 pb-2">
+                                        <strong>Edit Car Information:</strong>
+                                    </h5>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <tbody>
+                                            <!--Car Make field with edit button(display the car make with option to edit). Look to remove edit buttons?-->
+                                            <tr>
+                                                <td>
+                                                    <label>Car Make:</label>
+                                                    <input id="carMake" class="form-control" name="carMake" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <!--Model field with an edit button(displays current car model with option to edit)-->
+                                            <tr>
+                                                <td>
+                                                        <label>Model:</label>
+                                                    <input id="model" class="form-control" name="model", placeholder="">
+                                                </td>
+                                            </tr>
+                                            <!--Color field with an edit button(display current car color with option to edit)-->
+                                            <tr>
+                                                <td>
+                                                    <label>Color:</label>
+                                                    <input id="color" class="form-control"  name="color" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <!--Year field with an edit button(displays the year of the car with option to edit)-->
+                                            <tr>
+                                                <td>
+                                                    <label>Year:</label>
+                                                    <input id="year" class="form-control"  name="year" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <!--License field with an edit button(displays current license number with the option to edit)-->
+                                            <tr>
+                                                <td>
+                                                    <label>License Number:</label>
+                                                    <input id="licNumber" class="form-control" name="licNumber" placeholder="">
+                                                </td>
+                                            </tr>
+                                            <tr></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>	
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	<!--Caroline Added for saving user information-->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+    <script src="js/profileSubmit.js"></script>
+</body>
+</html>

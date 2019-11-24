@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+        <% include ../partials/header %>
+        
+        <link rel="stylesheet" href="css/mapstyles.css">
+	</header>
+
+	<main>
+        <div class="container">
+
+        <% parkdata.parkinglocation.forEach(function(item){ %>
+            
+                <div class="row" id="mapformat">
+                    <div class="col-md-6 col-lg-5 col-xl-4"><img id="mapimage" src="images/map/<%= item.image %>"></div>
+                    <div class="col-md-6">
+                        <div id="maprow">
+                            <h1 id="mapname"><%= item.location %><br></h1>
+                            <p id="maplocation"><%= item.description %><br></p>
+                            <p id="status"><%= item.status %></p>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" aria-valuenow=" <%= item.capacity %> " aria-valuemin="0" aria-valuemax="100" style="width: 50%;">50%</div>
+                        </div>
+                    </div>
+                </div>
+                
+            
+        <% }); %>
+        </div>
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>

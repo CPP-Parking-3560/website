@@ -1,0 +1,43 @@
+
+.officerSearch{
+	background-color: #f1f7fc;
+	padding: 80px 0;
+}
+
+.officerSearch .cite-group{
+	align-items: center;
+	max-width: 320px;
+  	width: 90%;
+  	margin: 0 auto;
+  	background-color: #ffffff;
+  	padding: 10px;
+	
+}
+/*Make .citationReason invisible until search turns up successful
+*/
+.citationReason .dropdown{
+	align-items: center;
+	max-width: 320px;
+  	width: 90%;
+  	margin: 0 auto;
+  	background-color: #ffffff;
+  	padding: 10px;
+}
+#citeButton{
+	padding-top: 10px;
+	padding-left: 60px;
+	padding-right:60px;
+}
+#logo{
+	padding: 10px;
+}
+#orText{
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+
+body{
+	background-color: #f1f7fc;
+	text-align: center;
+}
