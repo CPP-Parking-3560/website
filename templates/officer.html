@@ -19,18 +19,12 @@
 		<div class="officerSearch">
 			<form method="post">
 				<div class="cite-group" id="logo"><img src="static/assets/img/icon2.jpg"></div>
-				<h2 class="cite-group">Search</h2>
+				<h2 class="cite-group">Issue Citation</h2>
 				<!--Search Box for license search-->
 				<div class="cite-group">
 					<input id="licenseSearch" class="form-control" name="licenseSearch" placeholder="License Number">
 				</div>
-				<div class="cite-group" id="orText">
-					Or
-				</div>
-				<!--Search Box for searching by permit id-->
-				<div class="cite-group">
-					<input id="permitSearch" class="form-control" name="permitSearch" placeholder="Permit Number">
-				</div>
+				
 				<!--Search Button-->
 				<div class="cite-group">
 					<!--Replace onClickFunction-->
@@ -46,21 +40,26 @@
 			<form method="post">
 				<!--Dropdown button-->
 				<div class="dropdown">
-                    <label>
-                        <select class="browser-default custom-select" id = "dropdownButton">
-                            <option selected>Open this select menu</option>
-                            <option value="1">No Visible Permit</option>
-                            <option value="2">Invalid Parking Spot</option>
-                            <option value="3">Permit Expired</option>
-                        </select>
-                    </label>
-                    <div class="citeButton" id="citeButton">
+					<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownButton" data-toggle="dropdown">Reason for Citation
+					<span class="caret"></span></button>
+					<!--Dropdown menu with reasons for citation-->
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">No Visible Permit</a>
+						<a class="dropdown-item" href="#">Invalid Parking Spot</a>
+						<a class="dropdown-item" href="#">Permit Expired</a>
+					</div>
+
+					<div class="citeDate" id="cite">
+						<input id="citationDate" class="form-control" name="citationDate"  type="date" placeholder="Enter Date of Citation">
+					</div>
+
+					<div class="citeButton" id="cite">
 						<!--Replace onClickFunction-->
 						<button class="btn btn-primary btn-block" type="button" onclick="submitClick()">Cite</button>
 					</div>
 
 				</div>
-
+				
 			</form>
 		</div>
 		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>

@@ -1,13 +1,13 @@
-const socket = io('http://pi.smcreboot.com:3000')
+const socket = io('http://pi.smcreboot.com:5000')
 const messageContainer = document.getElementById('message-container')
 const roomContainer = document.getElementById('room-container')
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
 
 if (messageForm != null) {
-  const name = prompt('What is your name?')
+  //const name = prompt('What is your name?')
   appendMessage('You joined')
-  socket.emit('new-user', roomName, name)
+  socket.emit('new-user', roomName,   localStorage.getItem("userName"))
 
   messageForm.addEventListener('submit', e => {
     e.preventDefault()
@@ -23,6 +23,7 @@ socket.on('room-created', room => {
   roomElement.innerText = room
   const roomLink = document.createElement('a')
   roomLink.href = `/${room}`
+  console.log('create room');
   roomLink.innerText = 'join'
   roomContainer.append(roomElement)
   roomContainer.append(roomLink)

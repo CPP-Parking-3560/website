@@ -23,10 +23,17 @@
   	background-color: #ffffff;
   	padding: 10px;
 }
-#cite{
+#citeButton{
 	padding-top: 10px;
 	padding-left: 60px;
 	padding-right:60px;
+}
+#logo{
+	padding: 10px;
+}
+#orText{
+	font-size: 14pt;
+	font-weight: bold;
 }
 
 

@@ -14,6 +14,10 @@ app.get('/', (req, res) => {
   res.render('index', { rooms: rooms })
 })
 
+app.get('/login', (req, res) => {
+    res.render('login')
+  })
+
 app.post('/room', (req, res) => {
   if (rooms[req.body.room] != null) {
     return res.redirect('/')

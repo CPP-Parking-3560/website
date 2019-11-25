@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/OfficerCitation-Form.css">
+</head>
+<body class="container">
+
+	<header>
+		<% include ../partials/header %>
+	</header>
+
+	<main>
+	<!--Row for License or Permit Search-->
+    <div class="officerSearch">
+			<form method="post">
+				<div class="cite-group" id="logo"><img src="images/icon2.jpg"></div>
+				<h2 class="cite-group">Search</h2>
+				<!--Search Box for license search-->
+				<div class="cite-group">
+					<input id="licenseSearch" class="form-control" name="licenseSearch" placeholder="License Number">
+                </div>
+                <label id ="status">Enter search query</label>
+				<!--Search Button-->
+				<div class="cite-group">
+					<!--Replace onClickFunction-->
+					<button id="goButton" class="btn btn-primary btn-block" type="button" onclick="searchClick()">Go </button>
+                </div>
+            </form>
+            <!--Row for Citation reason menu
+			Make Invisible until license/permit search button returns with a matching id-->
+            <div class="citationReason" style="display:none;">
+                    <form method="post">
+                        <!--Dropdown button-->
+                        <div class="dropdown">
+                            <label>
+                                <select class="browser-default custom-select" id = "dropdownButton">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">No Visible Permit</option>
+                                    <option value="2">Invalid Parking Spot</option>
+                                    <option value="3">Permit Expired</option>
+                                </select>
+                            </label>
+                            <div class="citeButton" id="citeButton">
+                                <!--Replace onClickFunction-->
+                                <button class="btn btn-primary btn-block" type="button" onclick="submitClick()">Cite</button>
+                            </div>
+        
+                        </div>
+        
+                    </form>
+                </div>
+		</div>
+		
+		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
+		<script src="js/officer.js"></script>	
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>

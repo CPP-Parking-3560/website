@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ../partials/head %>
+</head>
+<body class="container">
+
+	<header>
+        <% include ../partials/header %>
+        <link rel="stylesheet" href="css/Login-Form-Clean.css">
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+	</header>
+
+	<main>
+		<div id="login-sign" class="login-clean">
+            <form method="post">
+                <h2 class="sr-only">Login Form</h2>
+                <div class="illustration"><img src="images/icon2.jpg"></div>
+                <div class="form-group">
+                    <input id="txtEmail" class="form-control" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input id="txtPassword" class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <button id="btnLogIn" class="btn btn-primary btn-block" onclick="login()" type="submit" style="background-color: rgb(20,37,129);">Log In</button>
+                    <button id="btnSignUp" class="btn btn-primary btn-block" onclick="signup()" type="submit" style="background-color: rgb(20,37,129);">Sign Up</button></div>
+            </form>
+        </div>
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script>
+        //var auth = fetch("./auth.json");
+        //This file is used for the form in login.html
+        var firebaseConfig = {
+            apiKey: "AIzaSyA8bOv1jNRZwyX59w9mqZYom2joLCJWFqQ",
+            authDomain: "cs3560parking.firebaseapp.com",
+            databaseURL: "https://cs3560parking.firebaseio.com",
+            projectId: "cs3560parking",
+            storageBucket: "cs3560parking.appspot.com",
+            messagingSenderId: "270171142840",
+            appId: "1:270171142840:web:620cb57b803ba3981a524d",
+            measurementId: "G-TVNM1KFV8F"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+   	<script src="js/login.js"></script>
+</body>
+</html>
