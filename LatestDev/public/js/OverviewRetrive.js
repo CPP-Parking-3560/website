@@ -16,19 +16,32 @@ database = firebase.database();
 
 var userID = localStorage.getItem("storageName");
 var emailID = localStorage.getItem("emailAuth");
-var licenseNum = localStorage.getItem("licNum");
 
+firebase.database().ref('users/' + userID).once('value').then(function(snapshot) {
+    var numLic = (snapshot.val() && snapshot.val().license) || 'Anonymous';
+    console.log(numLic);
+    localStorage.setItem("licNumm",numLic);
+});
 
 var starCountRef = firebase.database().ref('users/' + userID);
-var getCarData = firebase.database().ref('cars/' + licenseNum);
 
-getCarData.on('value', function (snapshot) {
-    document.getElementById("carMakeInput").innerHTML = (snapshot.val() && snapshot.val().make) || 'Anonymous';
-    document.getElementById("modelInput").innerHTML = (snapshot.val() && snapshot.val().model) || 'Anonymous';
-    document.getElementById("colorInput").innerHTML = (snapshot.val() && snapshot.val().color) || 'Anonymous';
-    document.getElementById("yearInput").innerHTML = (snapshot.val() && snapshot.val().year) || 'Anonymous';
-    document.getElementById("licenseInput").innerHTML = (snapshot.val() && snapshot.val().license) || 'Anonymous';
-});
+
+var getCarData;
+setTimeout(function () {
+    var licenseNum = localStorage.getItem("licNumm");
+    getCarData = firebase.database().ref('cars/' + licenseNum);
+}, 2000);
+
+
+setTimeout(function () {
+    getCarData.on('value', function (snapshot) {
+        document.getElementById("carMakeInput").innerHTML = (snapshot.val() && snapshot.val().make) || 'Anonymous';
+        document.getElementById("modelInput").innerHTML = (snapshot.val() && snapshot.val().model) || 'Anonymous';
+        document.getElementById("colorInput").innerHTML = (snapshot.val() && snapshot.val().color) || 'Anonymous';
+        document.getElementById("yearInput").innerHTML = (snapshot.val() && snapshot.val().year) || 'Anonymous';
+        document.getElementById("licenseInput").innerHTML = (snapshot.val() && snapshot.val().license) || 'Anonymous';
+    });
+}, 3000);
 
 starCountRef.on('value', function(snapshot) {
 
