@@ -13,12 +13,14 @@
 		<ul class="nav navbar-nav">
 		  <li><a href="/overview">Overview</a></li>
 		  <li><a href="/map">Parking Map</a></li>
-		  <li><a href="/chat">Rider Chatroom</a></li>
-		  <li><a href="/officer">Citation Page</a></li>
+		  <li id="signedin"><a href="/chat">Rider Chatroom</a></li>
+		  <li id="officerpage"><a href="/officer">Citation Page</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-		  <li><a href="/edit"><span class="glyphicon glyphicon-log-in"></span> Edit User Information</a></li>
+		  <li id="log"><a href="/"onclick="ClearInfo(); return false"> Sign Out</a></li>
+		  <li id="signedin"><a href="/edit"><span class="glyphicon glyphicon-log-in"></span> Edit User Information</a></li>
 		</ul>
 	  </div>
 	</div>
+	<script src="js/header.js"></script>
   </nav>

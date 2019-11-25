@@ -20,6 +20,15 @@ var licenseNum = localStorage.getItem("licNum");
 
 
 var starCountRef = firebase.database().ref('users/' + userID);
+starCountRef.on('value', function(snapshot) {
+
+    document.getElementById("nameInput").innerHTML = (snapshot.val() && snapshot.val().name) || 'Anonymous';
+    document.getElementById("emailInput").innerHTML = emailID;
+    document.getElementById("passwordInput").innerHTML = (snapshot.val() && snapshot.val().password) || 'Anonymous';
+    document.getElementById("phoneInput").innerHTML = (snapshot.val() && snapshot.val().phone) || 'Anonymous';
+    
+});
+
 var getCarData = firebase.database().ref('cars/' + licenseNum);
 
 getCarData.on('value', function (snapshot) {
@@ -30,12 +39,3 @@ getCarData.on('value', function (snapshot) {
     document.getElementById("licenseInput").innerHTML = (snapshot.val() && snapshot.val().license) || 'Anonymous';
 });
 
-starCountRef.on('value', function(snapshot) {
-
-    document.getElementById("nameInput").innerHTML = (snapshot.val() && snapshot.val().name) || 'Anonymous';
-    document.getElementById("emailInput").innerHTML = emailID;
-    document.getElementById("passwordInput").innerHTML = (snapshot.val() && snapshot.val().password) || 'Anonymous';
-    document.getElementById("phoneInput").innerHTML = (snapshot.val() && snapshot.val().phone) || 'Anonymous';
-    //document.getElementById("ticketType").innerHTML = (snapshot.val() && snapshot.val().citation) || 'Anonymous';
-    //firebase.database().ref('users').child(userID).update({'dateOfBirth': 'hello'})
-});

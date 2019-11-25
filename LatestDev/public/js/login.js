@@ -11,7 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             var Uid = firebase.auth().currentUser.uid;
             localStorage.setItem("storageName",Uid);
             localStorage.setItem("emailAuth", email_id);
-            localStorage.setItem("userName", "Temp");
+           
             //localStorage.setItem("storageName", uid);
             console.log("Welcome: " + email_id +
                          "\nUserID: " + Uid +
@@ -28,6 +28,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             else if (email_id == "amillan1@cpp.edu"){
                 firebase.auth().signOut();
                 localStorage.setItem("account", "officer");
+                localStorage.setItem("userName", "Officer Millan");
                 window.location="/officer";
                 //location.replace("/officer");
             }

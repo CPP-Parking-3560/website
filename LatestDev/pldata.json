@@ -26,28 +26,28 @@
         "location":"E2",
         "description":"NorthWest of Interim Design Center (Bldg. 89).",
         "status":"Status: None",
-        "capacity":"50"
+        "capacity":"60"
     },                  
     {
         "image":"Pk-F1.gif",
         "location":"F1",
         "description":"SouthEast of Residence Hall, Aliso (Bldg. 23).",
         "status":"Status: None",
-        "capacity":"50"
+        "capacity":"95"
     },
     {
         "image":"Pk-F3.gif",
         "location":"F3",
         "description":"North of Parking Lot F4 and South of Recreation/Maintenance (Bldg. 71).",
         "status":"Status: None",
-        "capacity":"50"
+        "capacity":"38"
     },
     {
         "image":"Pk-F5.gif",
         "location":"F5",
         "description":"NorthEast of Parking Structure (Bldg. 106)",
         "status":"Status: None",
-        "capacity":"50"
+        "capacity":"43"
     },
     {
         "image":"Pk-F9.gif",
@@ -68,7 +68,7 @@
         "location":"H",
         "description":"South of Student Affairs Information Technology Services (Bldg. 91).",
         "status":"Status: None",
-        "capacity":""
+        "capacity":"30"
     },
     {
         "image":"Pk-I.gif",
@@ -89,35 +89,35 @@
         "location":"M",
         "description":"South of Parking Lot J and South West of College of Environmental Design (Bldg. 7).",
         "status":"Status: None",
-        "capacity":"50"
+        "capacity":"100"
     },
     {
         "image":"Pk-N.jpg",
         "location":"N",
         "description":"On Bronco Way Across from the Child Care Center (Building 116).",
         "status":"Status: None",
-        "capacity":"50"
+        "capacity":"10"
     },
     {
         "image":"comingsoon.gif",
         "location":"Overflow Parking Lot",
         "description":"SouthEast of American Red Cross",
         "status":"Status: None",
-        "capacity":"50"
+        "capacity":"40"
     },
     {
         "image":"Pk-Structure-2.jpg",
         "location":"Parking Structure 2 ",
         "description":"SouthEast of iPoly High School (Bldg. 128)",
         "status":"Status: None",
-        "capacity":"50"
+        "capacity":"100"
     },
     {
         "image":"Pk-R.gif",
         "location":"R",
         "description":"NorthWest of Kellogg House Pomona (Bldg. 112)",
         "status":"Status: None",
-        "capacity":"50"
+        "capacity":"58"
     },
     {
         "image":"Pk-U.gif",
