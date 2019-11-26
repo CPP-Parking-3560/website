@@ -25,10 +25,6 @@ firebase.auth().onAuthStateChanged(function(user) {
                    console.log("Error: " + error.message);
                });
            }
-           else if (email_id == "amillan1@cpp.edu"){
-               firebase.auth().signOut();
-               location.replace("officer.html");
-           }
            else{
                firebase.auth().signOut();
                location.replace("profile.html");

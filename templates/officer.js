@@ -20,51 +20,21 @@ function searchClick() {
 
     console.log(licenseNumber);
 
-    var getCarData = firebase.database().ref().child('cars/' + licenseNumber);
+    var getCarData = firebase.database().ref('cars/' + licenseNumber);
 
     console.log(getCarData);
 
-    setTimeout(function(){
-        var userKey = localStorage.getItem("userKey");
-
-        if(userKey != 'Anonymous') {
-            console.log("User key is: " + userKey);
-            window.alert("License Found");
-        }
-        else {
-            window.alert("License Not Found");
-        }
-    }, 2000);
-
-    firebase.database().ref('cars/' + licenseNumber).once('value').then(function(snapshot) {
-        var username = (snapshot.val() && snapshot.val().userID) || 'Anonymous';
-        console.log(username);
-        localStorage.setItem("userKey",username);
-    });
-
+    if(getCarData != null) {
+        userID = getCarData.userID;
+        console.log(userID);
+        window.alert("License Found");
+    }
+    else {
+        window.alert("License Not Found");
+    }
 
 }
 
 function submitClick() {
-    var userKey = localStorage.getItem("userKey");
-    var citationOption = document.getElementById("dropdownButton").value;
-
-    if(citationOption == 1) {
-        citationOption = "No Visible Permit";
-    }
-    else if(citationOption == 2) {
-        citationOption = "Invalid Parking Spot";
-    }
-    else if(citationOption == 3) {
-        citationOption = "Expired Permit";
-    }
-    else {
-        citationOption = "Kill me";
-    }
-
-    firebase.database().ref('users').child(userKey).update({
-        'citation': citationOption
-    });
-
-    window.alert("Ticket Submitted");
+    
 }
