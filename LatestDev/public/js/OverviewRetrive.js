@@ -49,6 +49,7 @@ starCountRef.on('value', function(snapshot) {
     document.getElementById("emailInput").innerHTML = emailID;
     document.getElementById("passwordInput").innerHTML = (snapshot.val() && snapshot.val().password) || 'Anonymous';
     document.getElementById("phoneInput").innerHTML = (snapshot.val() && snapshot.val().phone) || 'Anonymous';
-    //document.getElementById("ticketType").innerHTML = (snapshot.val() && snapshot.val().citation) || 'Anonymous';
+    document.getElementById("ticketType").innerHTML = (snapshot.val() && snapshot.val().citation) || 'Reason';
+    document.getElementById("ticketPrice").innerHTML = (snapshot.val() && snapshot.val().price) || '$';
     //firebase.database().ref('users').child(userID).update({'dateOfBirth': 'hello'})
 });

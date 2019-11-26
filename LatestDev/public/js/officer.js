@@ -50,22 +50,27 @@ function searchClick() {
 function submitClick() {
     var userKey = localStorage.getItem("userKey");
     var citationOption = document.getElementById("dropdownButton").value;
+    var price;
 
     if(citationOption == 1) {
         citationOption = "No Visible Permit";
+        price = "$100";
     }
     else if(citationOption == 2) {
         citationOption = "Invalid Parking Spot";
+        price = "$150"
     }
     else if(citationOption == 3) {
         citationOption = "Expired Permit";
+        price = "$200";
     }
     else {
         citationOption = "Kill me";
     }
 
     firebase.database().ref('users').child(userKey).update({
-        'citation': citationOption
+        'citation': citationOption,
+        'price': price
     });
 
     document.getElementById('status').innerHTML='Ticket Submitted';

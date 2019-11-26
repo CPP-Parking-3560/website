@@ -30,7 +30,7 @@
             </form>
             <!--Row for Citation reason menu
 			Make Invisible until license/permit search button returns with a matching id-->
-            <div class="citationReason" style="display:none;">
+            <div id="citationReason" style="display:none;">
                     <form method="post">
                         <!--Dropdown button-->
                         <div class="dropdown">
@@ -46,12 +46,10 @@
                                 <!--Replace onClickFunction-->
                                 <button class="btn btn-primary btn-block" type="button" onclick="submitClick()">Cite</button>
                             </div>
-        
                         </div>
-        
                     </form>
-                </div>
-		</div>
+            </div>
+    </div>
 		
 		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>
